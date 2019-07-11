@@ -1,0 +1,40 @@
+<!--Cho danh sách các số nguyên ở trong một mảng. -->
+<!--Viết hàm listPrimes() với đầu vào là mảng số nguyên và đầu ra là một mảng mới chứa các số là -->
+<!--nguyên tố thuộc mảng đã cho.-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkPrime(number) {
+        if (number < 2) {
+            return false;
+        };
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (number % 2 == 0) {
+                return false;
+            }
+        }
+        return true
+    }
+
+    function check_arr_prime() {
+        let number = [10, 5, 2, 8, 7, 13];
+
+        for (let i = 0; i < number.length; i++) {
+            if (checkPrime(number[i])) {
+                document.write(number[i]);
+            }
+            ;
+        }
+        ;
+    };
+    check_arr_prime()
+</script>
+</body>
+</html>
